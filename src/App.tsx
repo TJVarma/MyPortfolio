@@ -6,14 +6,14 @@ const projects = [
   {
     id: 1,
     title:"Bart model to detect action items from meetings",
-    description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.",
+    description: "",
     image: "/project1.png",
     link: "https://github.com"
   },
   {
     id: 2,
     title: "Missing Child Detection",
-    description:"Developed a model to extract features of children so to predict",
+    description:"",
     image: "/image.png",
     link: "https://github.com"
   },
