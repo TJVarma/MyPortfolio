@@ -7,21 +7,21 @@ const projects = [
     id: 1,
     title:"Bart model to detect action items from meetings",
     description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.",
-    image: "src/project1.png",
+    image: "/project1.png",
     link: "https://github.com"
   },
   {
     id: 2,
     title: "Missing Child Detection",
     description:"Developed a model to extract features of children so to predict",
-    image: "src/image.png",
+    image: "/image.png",
     link: "https://github.com"
   },
   {
     id: 3,
     title: "Diabetes Detection",
     description: "",
-    image: "src/diabetes.png",
+    image: "/diabetes.png",   
     link: "https://github.com"
   },
   {
@@ -91,7 +91,7 @@ function App() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-64 h-64 rounded-full overflow-hidden flex-shrink-0 shadow-2xl">
               <img
-                src="src\thanoj.jpg"
+                src="/thanoj.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
