@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, ChevronDown } from 'lucide-react';
 
 
@@ -33,6 +33,7 @@ const projects = [
   }
 ];
 function App() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
       {/* Hero Section */}
@@ -113,49 +114,67 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4" id="contact">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Get In Touch</h2>
-          <div className="bg-gray-800 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-transform">
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow resize-none"
-                  placeholder="Your message..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:opacity-90 transform hover:scale-[1.02] transition-all duration-200"
-              >
-                Send Message
-              </button>
-            </form>
+  <section className="py-20 px-4" id="contact">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-16">Get In Touch</h2>
+    <div className="bg-gray-800 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-transform">
+      {!formSubmitted ? (
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit={() => setFormSubmitted(true)}
+          className="space-y-6"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
+              placeholder="Your Name"
+            />
           </div>
-        </div>
-      </section>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
+              placeholder="your@email.com"
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              required
+              className="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-shadow resize-none"
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:opacity-90 transform hover:scale-[1.02] transition-all duration-200"
+          >
+            Send Message
+          </button>
+        </form>
+      ) : (
+        <p className="text-center text-green-400 text-lg font-semibold">
+          Thank you! I’ll be in touch ✨
+        </p>
+      )}
+    </div>
+  </div>
+  </section>
 
       {/* Footer */}
       <footer className="py-8 text-center text-gray-400">
