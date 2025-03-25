@@ -123,7 +123,22 @@ function App() {
           name="contact"
           method="POST"
           data-netlify="true"
-          onSubmit={() => setFormSubmitted(true)}
+          onSubmit={(e) => {
+            e.preventDefault(); // Prevent default browser submission
+            const form = e.target as HTMLFormElement;
+            const data = new FormData(form);
+        
+            fetch("/", {
+              method: "POST",
+              body: data,
+            })
+              .then(() => setFormSubmitted(true))
+              .catch((error) => {
+                console.error("Form submission error:", error);
+                alert("Submission failed. Please try again.");
+              });
+              
+          }}
           className="space-y-6"
         >
           <input type="hidden" name="form-name" value="contact" />
