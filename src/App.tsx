@@ -60,35 +60,47 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4" id="projects">
-        <h2 className="text-4xl font-bold text-center mb-16">Featured Projects</h2>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div key={project.id} className="group relative bg-gray-800 rounded-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4">
-                  {project.description}
-                </p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300"
-                >
-                  View Project <ExternalLink className="ml-2 w-4 h-4" />
-                </a>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" style={{ pointerEvents: "none" }}></div>
-            </div>
-          ))}
+<section className="py-20 px-4" id="projects">
+  <h2 className="text-4xl font-bold text-center mb-16">Featured Projects</h2>
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    {projects.map((project) => (
+      <div
+        key={project.id}
+        className="group relative bg-gray-800 rounded-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl"
+      >
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-6">
+          <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+          <p className="text-gray-400 mb-4">{project.description}</p>
+
+          {/* Conditionally render the link or 'Coming Soon' */}
+          {project.link && project.link !== "#" ? (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-400 hover:text-blue-300"
+            >
+              View Project <ExternalLink className="ml-2 w-4 h-4" />
+            </a>
+          ) : (
+            <span className="inline-flex items-center text-gray-500 italic">
+             Link Coming Soon...
+            </span>
+          )}
         </div>
-      </section>
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+          style={{ pointerEvents: "none" }}
+        ></div>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* About Section */}
       <section className="py-20 px-4 bg-gray-800" id="about">
