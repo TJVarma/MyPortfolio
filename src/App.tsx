@@ -8,14 +8,14 @@ const projects = [
     title:"Bart model to detect action items from meetings",
     description: "",
     image: "/project1.png",
-    link: ""
+    link: "#"
   },
   {
     id: 2,
     title: "Missing Child Detection",
     description:"",
     image: "/image.png",
-    link: ""
+    link: "#"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const projects = [
     title: "E-commerce Portal using python",
     description: "",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    link: ""
+    link: "#"
   }
 ];
 function App() {
