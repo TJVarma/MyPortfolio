@@ -20,9 +20,9 @@ const projects = [
   {
     id: 3,
     title: "Diabetes Detection",
-    description: "",
+    description: "This project is a Streamlit-based web application that predicts the likelihood of a person having diabetes based on medical diagnostic measurements. It uses a Logistic Regression model trained on the Pima Indians Diabetes Dataset.",
     image: "/diabetes.png",   
-    link: "https://github.com"
+    link: "https://tjvarma.streamlit.app/"
   },
   {
     id: 4,
@@ -75,11 +75,16 @@ function App() {
                 <p className="text-gray-400 mb-4">
                   {project.description}
                 </p>
-                <a href={project.link} className="inline-flex items-center text-blue-400 hover:text-blue-300">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300"
+                >
                   View Project <ExternalLink className="ml-2 w-4 h-4" />
                 </a>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" style={{ pointerEvents: "none" }}></div>
             </div>
           ))}
         </div>
