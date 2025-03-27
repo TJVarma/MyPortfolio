@@ -46,13 +46,13 @@ function App() {
           AI And Ml Engineer 
         </p>
         <div className="flex gap-6 mb-12">
-          <a href="https://github.com" className="transform hover:scale-110 transition-transform">
+          <a href="https://github.com/TJVarma" className="transform hover:scale-110 transition-transform">
             <Github className="w-8 h-8" />
           </a>
-          <a href="https://linkedin.com" className="transform hover:scale-110 transition-transform">
+          <a href="https://linkedin.com/in/thanojatluri0907" className="transform hover:scale-110 transition-transform">
             <Linkedin className="w-8 h-8" />
           </a>
-          <a href="mailto:contact@example.com" className="transform hover:scale-110 transition-transform">
+          <a href="mailto:atluri.29@wright.edu" className="transform hover:scale-110 transition-transform">
             <Mail className="w-8 h-8" />
           </a>
         </div>
