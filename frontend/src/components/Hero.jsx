@@ -130,8 +130,9 @@ export default function Hero() {
               className="mt-6 max-w-xl text-lg md:text-xl text-slate-400 leading-relaxed"
               data-testid="hero-subtext"
             >
-              I build things, solve hard problems, and love what I do — crafting
-              reliable systems where infrastructure meets intelligence.
+              Aspiring ML Engineer passionate about Python, NLP, and Deep Learning —
+              building AI solutions that solve real-world problems, from RAG pipelines
+              to computer vision systems.
             </motion.p>
 
             <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
@@ -157,7 +158,7 @@ export default function Hero() {
                 <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
                 Online
               </div>
-              <div>Hyderabad / Remote</div>
+              <div>Dayton, OH / Remote</div>
             </motion.div>
           </motion.div>
 

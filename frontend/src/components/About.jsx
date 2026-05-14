@@ -4,24 +4,24 @@ import { Server, Brain, Cloud, Code2 } from "lucide-react";
 
 const skillGroups = [
   {
-    icon: Server,
-    title: "Systems & Infrastructure",
-    skills: ["Docker", "Kubernetes", "Linux", "Networking"],
-  },
-  {
     icon: Brain,
-    title: "ML & Data",
-    skills: ["Python", "TensorFlow", "Model Deployment", "MLOps"],
+    title: "ML / AI",
+    skills: ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCV", "NLP", "Pandas", "NumPy"],
   },
   {
     icon: Cloud,
-    title: "Cloud & DevOps",
-    skills: ["AWS", "CI/CD", "Terraform", "Monitoring"],
+    title: "LLM & Gen AI",
+    skills: ["RAG", "LangChain", "ChromaDB", "Embeddings", "Prompt Engineering", "Vector DBs"],
   },
   {
     icon: Code2,
-    title: "Languages",
-    skills: ["Python", "Bash", "SQL", "Go"],
+    title: "Languages & Web",
+    skills: ["Python", "C", "R", "HTML", "CSS", "JavaScript"],
+  },
+  {
+    icon: Server,
+    title: "Platforms & Databases",
+    skills: ["Docker", "Linux", "Windows", "MySQL", "SQL Server"],
   },
 ];
 
@@ -66,27 +66,29 @@ export default function About() {
                 <span className="text-xs uppercase tracking-widest text-slate-500 font-mono">The story</span>
               </div>
               <p className="text-slate-300 text-lg leading-relaxed">
-                I'm an engineer who lives at the intersection of{" "}
-                <span className="text-cyan-300">infrastructure</span>,{" "}
-                <span className="text-cyan-300">machine learning</span>, and{" "}
-                <span className="text-cyan-300">automation</span>. I love taking
-                messy, manual systems and turning them into elegant pipelines
-                that just work — quietly and reliably, at scale.
+                I'm an aspiring{" "}
+                <span className="text-cyan-300">ML Engineer</span> with a strong
+                foundation in{" "}
+                <span className="text-cyan-300">NLP</span> and{" "}
+                <span className="text-cyan-300">Deep Learning</span>. I love
+                building AI solutions that tackle real-world problems — from
+                RAG pipelines and LLM-based reasoning to computer vision and
+                predictive modelling.
               </p>
               <p className="mt-5 text-slate-400 leading-relaxed">
-                Outside of work I'm usually tinkering with side projects,
-                reading about distributed systems, or chasing the perfect cup of
-                filter coffee.
+                Currently pursuing my MS in Computer Science at Wright State
+                University. Outside academics I'm tinkering with side projects,
+                reading ML papers, and presenting research at conferences.
               </p>
               <div className="mt-8 flex items-center gap-6 text-xs font-mono uppercase tracking-widest text-slate-500">
                 <div>
-                  <div className="text-2xl text-white font-outfit font-semibold">3+</div>
-                  <div className="mt-1">Years building</div>
+                  <div className="text-2xl text-white font-outfit font-semibold">4+</div>
+                  <div className="mt-1">AI Projects</div>
                 </div>
                 <div className="h-10 w-px bg-white/10" />
                 <div>
-                  <div className="text-2xl text-white font-outfit font-semibold">∞</div>
-                  <div className="mt-1">Curious mode</div>
+                  <div className="text-2xl text-white font-outfit font-semibold">2</div>
+                  <div className="mt-1">Conferences</div>
                 </div>
               </div>
             </div>

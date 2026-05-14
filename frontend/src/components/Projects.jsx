@@ -1,45 +1,45 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Boxes, LineChart, DollarSign, Wand2 } from "lucide-react";
+import { Github, ExternalLink, Brain, Eye, AlertTriangle, Search } from "lucide-react";
 
 const projects = [
   {
-    icon: Boxes,
-    title: "ML Model Serving Pipeline",
+    icon: Search,
+    title: "AI Career Copilot — RAG Resume Matcher",
     description:
-      "Scalable end-to-end model serving with autoscaling, blue-green deploys and observability on Kubernetes.",
-    stack: ["Docker", "Kubernetes", "FastAPI", "TensorFlow"],
-    github: "#",
+      "End-to-end RAG pipeline that matches resumes with job descriptions using embeddings and vector similarity search. Features PDF parsing, text chunking, ChromaDB indexing, skill gap analysis, and LLM-based reasoning.",
+    stack: ["Python", "LangChain", "ChromaDB", "RAG", "Embeddings"],
+    github: "https://github.com/TJVarma",
     demo: "#",
     accent: "from-cyan-400/30 to-blue-500/20",
   },
   {
-    icon: LineChart,
-    title: "Distributed Monitoring Dashboard",
+    icon: Eye,
+    title: "Reuniting Families — Missing Child ID",
     description:
-      "Real-time system-health observability across services with intelligent anomaly detection and alerting.",
-    stack: ["Prometheus", "Grafana", "Python", "React"],
-    github: "#",
+      "Deep learning facial recognition system using OpenCV and ResNet to locate missing children. Integrated surveillance feeds and a 68-landmark classifier for real-time detection, plus a web app for reporting missing cases.",
+    stack: ["Python", "OpenCV", "ResNet", "Deep Learning"],
+    github: "https://github.com/TJVarma",
     demo: "#",
     accent: "from-blue-500/30 to-indigo-500/20",
   },
   {
-    icon: DollarSign,
-    title: "Cloud Cost Optimizer",
+    icon: AlertTriangle,
+    title: "Incident Detection from Dashcam Videos",
     description:
-      "Python tool that analyses AWS spend, surfaces idle resources and recommends right-sizing — quietly saving dollars.",
-    stack: ["Python", "AWS", "Boto3", "Pandas"],
-    github: "#",
+      "Pseudo-labelling pipeline using YOLOv8, optical flow, and heatmap analysis to automatically detect and classify accidents, hazards, and near-miss events in unlabelled dashcam datasets. (2COOOL Kaggle Challenge, 2025)",
+    stack: ["YOLOv8", "Python", "OpenCV", "Optical Flow"],
+    github: "https://github.com/TJVarma",
     demo: "#",
     accent: "from-emerald-400/25 to-cyan-400/20",
   },
   {
-    icon: Wand2,
-    title: "Automation Toolkit",
+    icon: Brain,
+    title: "Meeting Insights — BART Summarizer",
     description:
-      "A growing collection of scripts and CLIs that cut manual ops work dramatically — because life is too short for repetition.",
-    stack: ["Bash", "Python", "GitHub Actions"],
-    github: "#",
+      "Trained a BART model to extract action items and concise summaries from meeting transcripts. Optimized training pipelines and fine-tuned hyperparameters for better performance as ML Engineer.",
+    stack: ["Python", "PyTorch", "BART", "NLP", "Transformers"],
+    github: "https://github.com/TJVarma",
     demo: "#",
     accent: "from-fuchsia-400/25 to-cyan-400/20",
   },
@@ -122,15 +122,6 @@ export default function Projects() {
                       data-testid={`project-github-${i}`}
                     >
                       <Github size={14} /> Source
-                    </a>
-                    <a
-                      href={p.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 px-4 py-2 text-xs font-semibold text-[#040814] shadow-[0_0_18px_rgba(34,211,238,0.35)] hover:shadow-[0_0_30px_rgba(34,211,238,0.6)] transition-all"
-                      data-testid={`project-demo-${i}`}
-                    >
-                      <ExternalLink size={14} /> Live demo
                     </a>
                   </div>
                 </div>

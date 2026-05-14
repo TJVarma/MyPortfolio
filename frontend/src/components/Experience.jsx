@@ -4,31 +4,31 @@ import { Briefcase } from "lucide-react";
 
 const items = [
   {
-    role: "Site Reliability / DevOps Engineer",
-    company: "Stealth Startup",
+    role: "Graduate Researcher",
+    company: "Wright State University, Dayton, OH",
     date: "2024 — Present",
     bullets: [
-      "Built a Kubernetes-based platform serving ML models with 99.9% uptime.",
-      "Reduced cloud spend ~28% via right-sizing and autoscaling policies.",
-      "Owned observability stack: Prometheus, Grafana, Loki.",
+      "Presented research on clustering methods for high-dimensional biological data, examining multiple algorithms to support reliable biological discovery.",
+      "Exploring genomics and biomedical data analysis with a focus on improving interpretability of complex datasets.",
     ],
   },
   {
-    role: "Software Engineer Intern",
-    company: "Fintech Co.",
-    date: "2023 — 2024",
+    role: "Research Presenter",
+    company: "ICIoT 2023 National Conference",
+    date: "2023",
     bullets: [
-      "Designed CI/CD pipelines for 12+ microservices on AWS.",
-      "Automated reconciliation jobs that previously ran manually each week.",
+      "Presented 'Automatic Text Summarization Using NLTK', discussing NLP-based extractive summarization techniques.",
+      "Focused on improving summary accuracy and efficiency using Python and NLP libraries.",
     ],
   },
   {
-    role: "Research Assistant",
-    company: "University Lab",
-    date: "2022 — 2023",
+    role: "Intern",
+    company: "Infidata Technologies, India",
+    date: "May 2023",
     bullets: [
-      "Worked on distributed ML training experiments using TensorFlow.",
-      "Co-authored an internal whitepaper on model deployment patterns.",
+      "Built a Train Delay Prediction Model using Linear Regression on historical train operation data — applied feature importance and probability estimation.",
+      "Developed an Online Shopping Application with product catalogs, shopping carts, order processing, and payment integration using SQL.",
+      "Built a Diabetes Prediction model using Logistic Regression, analyzing blood pressure, sugar levels, and BMI as input features.",
     ],
   },
 ];

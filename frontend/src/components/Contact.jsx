@@ -8,9 +8,9 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn", href: "#", testid: "contact-social-linkedin" },
-  { icon: Github, label: "GitHub", href: "#", testid: "contact-social-github" },
-  { icon: Mail, label: "Email", href: "mailto:hello@example.com", testid: "contact-social-email" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/thanojatluri0907", testid: "contact-social-linkedin" },
+  { icon: Github, label: "GitHub", href: "https://github.com/TJVarma", testid: "contact-social-github" },
+  { icon: Mail, label: "Email", href: "mailto:atluri.29@wright.edu", testid: "contact-social-email" },
 ];
 
 export default function Contact() {
@@ -96,7 +96,7 @@ export default function Contact() {
                 Currently
               </div>
               <p className="mt-2 text-slate-300 text-sm leading-relaxed">
-                Open to full-time roles in SRE / Platform / MLOps and interesting freelance gigs.
+                Open to full-time ML Engineer / AI roles and interesting research collaborations.
               </p>
             </div>
           </motion.div>

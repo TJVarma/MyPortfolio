@@ -16,13 +16,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <a href="#" className="h-9 w-9 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center text-slate-300 hover:text-cyan-300 hover:border-cyan-400/40 transition" data-testid="footer-linkedin">
+          <a href="https://www.linkedin.com/in/thanojatluri0907" target="_blank" rel="noreferrer" className="h-9 w-9 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center text-slate-300 hover:text-cyan-300 hover:border-cyan-400/40 transition" data-testid="footer-linkedin">
             <Linkedin size={16} />
           </a>
-          <a href="#" className="h-9 w-9 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center text-slate-300 hover:text-cyan-300 hover:border-cyan-400/40 transition" data-testid="footer-github">
+          <a href="https://github.com/TJVarma" target="_blank" rel="noreferrer" className="h-9 w-9 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center text-slate-300 hover:text-cyan-300 hover:border-cyan-400/40 transition" data-testid="footer-github">
             <Github size={16} />
           </a>
-          <a href="mailto:hello@example.com" className="h-9 w-9 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center text-slate-300 hover:text-cyan-300 hover:border-cyan-400/40 transition" data-testid="footer-email">
+          <a href="mailto:atluri.29@wright.edu" className="h-9 w-9 rounded-lg border border-white/10 bg-white/[0.02] flex items-center justify-center text-slate-300 hover:text-cyan-300 hover:border-cyan-400/40 transition" data-testid="footer-email">
             <Mail size={16} />
           </a>
         </div>
