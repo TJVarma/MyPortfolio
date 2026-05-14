@@ -96,7 +96,7 @@ export default function Contact() {
                 Currently
               </div>
               <p className="mt-2 text-slate-300 text-sm leading-relaxed">
-                Open to full-time ML Engineer / AI roles and interesting research collaborations.
+                Open to full-time AI/ML Engineer, Software Engineer roles and interesting research collaborations.
               </p>
             </div>
           </motion.div>
@@ -118,7 +118,6 @@ export default function Contact() {
                   name="name"
                   value={form.name}
                   onChange={onChange}
-                  placeholder="Ada Lovelace"
                   className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition"
                   data-testid="contact-input-name"
                 />
@@ -130,7 +129,6 @@ export default function Contact() {
                   type="email"
                   value={form.email}
                   onChange={onChange}
-                  placeholder="you@domain.com"
                   className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition"
                   data-testid="contact-input-email"
                 />
@@ -143,7 +141,6 @@ export default function Contact() {
                 value={form.message}
                 onChange={onChange}
                 rows={6}
-                placeholder="Tell me about the project, role or idea..."
                 className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition resize-none"
                 data-testid="contact-input-message"
               />

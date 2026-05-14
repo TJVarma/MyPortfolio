@@ -71,12 +71,12 @@ export default function About() {
                 foundation in{" "}
                 <span className="text-cyan-300">NLP</span> and{" "}
                 <span className="text-cyan-300">Deep Learning</span>. I love
-                building AI solutions that tackle real-world problems — from
+                building AI solutions that tackle real-world problems from
                 RAG pipelines and LLM-based reasoning to computer vision and
                 predictive modelling.
               </p>
               <p className="mt-5 text-slate-400 leading-relaxed">
-                Currently pursuing my MS in Computer Science at Wright State
+                Graduated with Master's Degree in Computer Science at Wright State
                 University. Outside academics I'm tinkering with side projects,
                 reading ML papers, and presenting research at conferences.
               </p>

@@ -130,7 +130,7 @@ export default function Hero() {
               className="mt-6 max-w-xl text-lg md:text-xl text-slate-400 leading-relaxed"
               data-testid="hero-subtext"
             >
-              Aspiring ML Engineer passionate about Python, NLP, and Deep Learning —
+              Aspiring ML Engineer passionate about Python, NLP, and Deep Learning
               building AI solutions that solve real-world problems, from RAG pipelines
               to computer vision systems.
             </motion.p>

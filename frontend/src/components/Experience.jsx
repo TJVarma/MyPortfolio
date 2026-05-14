@@ -26,7 +26,7 @@ const items = [
     company: "Infidata Technologies, India",
     date: "May 2023",
     bullets: [
-      "Built a Train Delay Prediction Model using Linear Regression on historical train operation data — applied feature importance and probability estimation.",
+      "Built a Train Delay Prediction Model using Linear Regression on historical train operation data applied feature importance and probability estimation.",
       "Developed an Online Shopping Application with product catalogs, shopping carts, order processing, and payment integration using SQL.",
       "Built a Diabetes Prediction model using Logistic Regression, analyzing blood pressure, sugar levels, and BMI as input features.",
     ],
@@ -36,7 +36,7 @@ const items = [
 export default function Experience() {
   return (
     <section id="experience" className="relative py-24 md:py-32" data-testid="experience-section">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-4xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,70 +52,47 @@ export default function Experience() {
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent md:-translate-x-px" />
+          <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-cyan-400/40 to-transparent" />
 
-          <div className="space-y-12">
-            {items.map((it, i) => {
-              const left = i % 2 === 0;
-              return (
-                <motion.div
-                  key={it.role}
-                  initial={{ opacity: 0, x: left ? -40 : 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                  className={`relative md:grid md:grid-cols-2 md:gap-12 ${
-                    left ? "" : "md:[&>*:first-child]:order-2"
-                  }`}
-                  data-testid={`experience-item-${i}`}
-                >
-                  {/* Dot */}
-                  <div className="absolute left-4 md:left-1/2 top-3 -translate-x-1/2 z-10">
-                    <span className="relative flex h-4 w-4 items-center justify-center">
-                      <span className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-40" />
-                      <span className="relative h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.9)]" />
-                    </span>
+          <div className="space-y-10">
+            {items.map((it, i) => (
+              <motion.div
+                key={it.role}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className="relative pl-14"
+                data-testid={`experience-item-${i}`}
+              >
+                {/* Dot */}
+                <div className="absolute left-5 top-6 -translate-x-1/2 z-10">
+                  <span className="relative flex h-4 w-4 items-center justify-center">
+                    <span className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-40" />
+                    <span className="relative h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.9)]" />
+                  </span>
+                </div>
+
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl p-6 md:p-7 hover:border-cyan-400/30 hover:-translate-y-1 transition-all duration-500">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-300 mb-2">
+                    <Briefcase size={12} />
+                    {it.date}
                   </div>
-
-                  <div className={`pl-12 md:pl-0 ${left ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                    <div
-                      className={`inline-flex flex-col gap-2 rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl p-6 md:p-7 hover:border-cyan-400/30 hover:-translate-y-1 transition-all duration-500 ${
-                        left ? "md:items-end" : "md:items-start"
-                      }`}
-                    >
-                      <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-300">
-                        <Briefcase size={12} />
-                        {it.date}
-                      </div>
-                      <h3 className="font-outfit text-xl md:text-2xl font-semibold text-white tracking-tight">
-                        {it.role}
-                      </h3>
-                      <div className="text-sm text-slate-400">{it.company}</div>
-                      <ul className={`mt-3 space-y-2 text-sm text-slate-400 ${left ? "md:text-right" : ""}`}>
-                        {it.bullets.map((b, k) => (
-                          <li key={k} className="flex gap-2 md:items-start">
-                            {left ? (
-                              <>
-                                <span className="md:order-2 md:ml-2 text-cyan-400 mt-1.5 h-1 w-1 rounded-full bg-cyan-400 shrink-0" />
-                                <span className="md:order-1">{b}</span>
-                              </>
-                            ) : (
-                              <>
-                                <span className="text-cyan-400 mt-2 h-1 w-1 rounded-full bg-cyan-400 shrink-0" />
-                                <span>{b}</span>
-                              </>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Empty side for grid alignment */}
-                  <div className="hidden md:block" />
-                </motion.div>
-              );
-            })}
+                  <h3 className="font-outfit text-xl md:text-2xl font-semibold text-white tracking-tight">
+                    {it.role}
+                  </h3>
+                  <div className="text-sm text-slate-400 mt-1 mb-4">{it.company}</div>
+                  <ul className="space-y-2">
+                    {it.bullets.map((b, k) => (
+                      <li key={k} className="flex gap-3 text-sm text-slate-400">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400 shrink-0" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

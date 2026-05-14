@@ -65,7 +65,7 @@ export default function Projects() {
             </h2>
           </div>
           <p className="max-w-md text-slate-400 text-sm md:text-base">
-            A handful of projects that I'm proud of — built to be reliable, fast,
+            A handful of projects that I'm proud of  built to be reliable, fast,
             and a bit fun to maintain.
           </p>
         </motion.div>

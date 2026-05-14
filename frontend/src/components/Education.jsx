@@ -6,7 +6,7 @@ const degrees = [
   {
     degree: "Master of Science in Computer Science",
     school: "Wright State University, Dayton, Ohio",
-    year: "Expected May 2026",
+    year: "May 2026",
     detail: "GPA 3.25 / 4.0 — focused on Machine Learning, NLP, and AI systems.",
   },
   {
@@ -18,7 +18,7 @@ const degrees = [
 ];
 
 const certs = [
-  "AWS Certified Cloud Practitioner",
+  "AWS Certified Cloud Practitioner -Udemy",
   "LLM Engineering — Udemy",
   "Python Certificate — Udemy",
   "Accenture: Data Analytics & Visualization Virtual Experience",
