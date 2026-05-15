@@ -4,6 +4,7 @@ from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
+import httpx
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List
@@ -20,6 +21,12 @@ db = client[os.environ['DB_NAME']]
 
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 # ---------- Models ----------
@@ -47,6 +54,33 @@ class ContactMessage(BaseModel):
     email: EmailStr
     message: str
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+# ---------- Email ----------
+async def send_email_notification(name: str, email: str, message: str):
+    api_key = os.environ.get('RESEND_API_KEY')
+    if not api_key:
+        return
+    try:
+        async with httpx.AsyncClient() as c:
+            await c.post(
+                "https://api.resend.com/emails",
+                headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+                json={
+                    "from": "Portfolio <onboarding@resend.dev>",
+                    "to": ["thanojvarma0907@gmail.com"],
+                    "subject": f"New message from {name}",
+                    "html": f"""
+                        <h2>New Contact Form Message</h2>
+                        <p><strong>Name:</strong> {name}</p>
+                        <p><strong>Email:</strong> {email}</p>
+                        <p><strong>Message:</strong></p>
+                        <p>{message}</p>
+                    """,
+                },
+            )
+    except Exception:
+        logger.exception("Failed to send email notification")
 
 
 # ---------- Routes ----------
@@ -83,6 +117,7 @@ async def create_contact_message(payload: ContactMessageCreate):
     except Exception as e:
         logging.exception("Failed to insert contact message")
         raise HTTPException(status_code=500, detail="Failed to save message") from e
+    await send_email_notification(msg.name, msg.email, msg.message)
     return msg
 
 
@@ -104,12 +139,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
 
 
 @app.on_event("shutdown")
