@@ -4,7 +4,9 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Experience from "../components/Experience";
+import ThreeMT from "../components/ThreeMT";
 import Education from "../components/Education";
+import Certifications from "../components/Certifications";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -25,7 +27,9 @@ export default function Portfolio() {
           <About />
           <Projects />
           <Experience />
+          <ThreeMT />
           <Education />
+          <Certifications />
           <Contact />
         </main>
         <Footer />
